@@ -1,0 +1,27 @@
+figure	group1	group2	pValue
+Ifng	Ifng OtherLymphoidCells WT_infected	Ifng OtherLymphoidCells KO_infected	0.000315039957376753
+Ifng	Ifng NaturalKillerCells WT_infected	Ifng NaturalKillerCells KO_infected	0.360507338259407
+Ifng	Ifng TCells1 WT_infected	Ifng TCells1 KO_infected	0.000333133895277405
+Ifng	Ifng TCells2 WT_infected	Ifng TCells2 KO_infected	1
+Ifng	Ifng TCells3 WT_infected	Ifng TCells3 KO_infected	0.479607510557466
+Mesothelial	Lcn2 Mesothelial WT_uninfected	Lcn2 Mesothelial KO_uninfected	2.32329443204322e-55
+Mesothelial	Saa3 Mesothelial WT_uninfected	Saa3 Mesothelial KO_uninfected	5.55757941978241e-62
+Mesothelial	Msln Mesothelial WT_uninfected	Msln Mesothelial KO_uninfected	1.28515603413411e-33
+Mesothelial	Upk3b Mesothelial WT_uninfected	Upk3b Mesothelial KO_uninfected	3.81692614387774e-47
+Fibroblasts	Il33 Fibroblasts WT_uninfected	Il33 Fibroblasts KO_uninfected	4.80049048435523e-18
+Fibroblasts	Cxcl1 Fibroblasts WT_uninfected	Cxcl1 Fibroblasts KO_uninfected	1.24023800308707e-08
+Fibroblasts	Il6 Fibroblasts WT_uninfected	Il6 Fibroblasts KO_uninfected	4.29411603265676e-06
+MuscularisMacrophages	Ccl8 MuscularisMacrophages WT_uninfected	Ccl8 MuscularisMacrophages KO_uninfected	3.44308463277152e-07
+MuscularisMacrophages	Ccl7 MuscularisMacrophages WT_uninfected	Ccl7 MuscularisMacrophages KO_uninfected	3.28744300823899e-23
+MuscularisMacrophages	Cxcl2 MuscularisMacrophages WT_uninfected	Cxcl2 MuscularisMacrophages KO_uninfected	1.95793981996539e-40
+MuscularisMacrophages	Ccl12 MuscularisMacrophages WT_uninfected	Ccl12 MuscularisMacrophages KO_uninfected	8.26288087503945e-06
+MuscularisMacrophages	Ccl2 MuscularisMacrophages WT_uninfected	Ccl2 MuscularisMacrophages KO_uninfected	2.98930818722769e-27
+MuscularisMacrophages	Ccl4 MuscularisMacrophages WT_uninfected	Ccl4 MuscularisMacrophages KO_uninfected	3.2553616172457e-20
+MuscularisMacrophages	Il1b MuscularisMacrophages WT_uninfected	Il1b MuscularisMacrophages KO_uninfected	5.28527293247808e-30
+MuscularisMacrophagesTwo	Arg1 MuscularisMacrophages WT_uninfected	Arg1 MuscularisMacrophages KO_uninfected	4.88496583207773e-06
+MuscularisMacrophagesTwo	Retnla MuscularisMacrophages WT_uninfected	Retnla MuscularisMacrophages KO_uninfected	0.124845276470235
+MuscularisMacrophagesTwo	Chil3 MuscularisMacrophages WT_uninfected	Chil3 MuscularisMacrophages KO_uninfected	0.0617960089795024
+All	Stat1 All WT_infected	Stat1 All KO_infected	3.95183176730964e-78
+MuscularisMacrophagesThree	Arg1 MuscularisMacrophages WT_infected	Arg1 MuscularisMacrophages KO_infected	1.84568963027523e-58
+MuscularisMacrophagesThree	Retnla MuscularisMacrophages WT_infected	Retnla MuscularisMacrophages KO_infected	4.37435593432531e-29
+MuscularisMacrophagesThree	Chil3 MuscularisMacrophages WT_infected	Chil3 MuscularisMacrophages KO_infected	3.17323781718704e-27
