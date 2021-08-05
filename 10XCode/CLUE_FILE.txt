@@ -1,0 +1,84 @@
+
+This code base is offered for the purposes of review and on the
+off-chance that it might prove useful to someone.  It may be freely
+used with suitable attribution. It is a snap-shot of my code base used
+in producing the analyses for Progatzky et al., Regulation of
+intestinal immune homeostasis and inflammatory response by enteric
+glia.
+
+This code is not being offered as a package, i.e., it is not expected
+to run "out of the box".  In particular it requires some files that
+are not in this repository. Chief among these is the Seurat object
+which can be downloaded from GEO XXX and should be placed in
+SeuratObject/SeuratObject.rds.  The code here then accesses this with
+the function getSeuratObject() in SeuratWare02.R
+
+The code here also uses several personal packages which are provided
+here as .gz files.
+
+-------------------------------------------------
+
+- SeuratWare02.R contains basic functionality such as retrieval of the
+Seurat object, names of various classifications (e.g., cell types) and
+conversion between seurat_clusters and cell types (referred to as
+shortNames), etc.
+
+- Pipeline02.R  This produces basic plots and counts as well as
+detecting marker genes and running various DE comparisons.  Originally
+run with the RNA assay, I have also run it with the integrated assay.
+
+- variousViolins.R makes violin plots of gene expression for various
+genes, cell types and quadrants.  In each case there is a pair of
+quadrants and a p-value is computed for each gene and cell type as
+regards the difference in expression between the two quadrants.  The
+results are recorded in violinPlots/
+
+- Cxcr3Violins.R and PdgfraViolins.R More violin plots.
+
+- IfngResponseGenes.R makes a similar figure for mean expression of Ifng
+response genes.  gseaIfngResponse.txt contains a list of human genes
+from the corresponding Hallmark gene set and these are converted to
+mouse genes by mousifyIfngResponse.R and stored in
+IfngResponseGenes.txt The resulting violin plot is in violinPlots/
+
+- runTwoGenesPlots.R uses twoGenesScatterPlot.R to produce scatter plots
+showing the expression of two genes in particular cell types. Figures
+and counts of cells expressing the either or both genes are in
+twoGeneFigures/
+
+- getGroupMarkerGenesNoCutoff.R  This makes listings of the group
+marker genes without applying a cutoff based on padj.
+
+- LFC_for_GSEA.R makes .rnk files for gsea for the cell types and
+treaments found in GSEA_cellTypes.csv.  In each case the we subset to
+the treatment and cell type and look for the DE genes for WT vs KO.
+We record these without thresholding in the appropriate subdirectory
+of GSEA.
+
+- fgsea.R takes these rank files and compares these against the Hallmark
+pathways.  The results are saved both with and without thresholding in
+the same directory as the rnk file.
+
+- subSampledDEGenes_nCount_RNA.R uses subsampling of clusters to
+eliminate cluster size when counting DE genes between two particular
+quadrants (a 'comparison').  In each case the smaller quadrant and
+cluster is randomly sampled to 50 genes, the larger to 100.  In
+addition, we control for nCount_RNA as a latent variable.  The results
+are saved to subsmapling/forSubsampling_nCount.txt
+
+- countSubsampledDEGenes_nCount_RNA.R uses the resulting data and
+produces the figure subsampling/countControlledDEGenes_nCount.pdf
+
+- makePaperFigures01.R makes plots of counts of DE genes for various
+comparisons in each of the clusters.  These are not controlled for
+cluster size. The results are in paperFigures/
+
+- makePaperFigures02.R makes a dot plot showing gene expression for each
+of the genes in paperFigures/GenesForDotPlotFigure.csv for each cell
+type.  Expression is shown by color, dot shows shows the percentage of
+the cluster that gene is expressed in.  The result is in paperFigures/
+
+- FranzeClusterSubplots.R subclusters several cell types we were
+interested in.  
+
+
